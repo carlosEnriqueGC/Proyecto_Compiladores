@@ -29,6 +29,8 @@ public class Grafica extends javax.swing.JFrame {
     public Grafica() {
         initComponents();
         this.setLocationRelativeTo(null);
+        mcarga.setVisible(false);
+        mresul.setVisible(false);
     }
 
     /**
@@ -48,79 +50,86 @@ public class Grafica extends javax.swing.JFrame {
         resultadoc = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         previo = new javax.swing.JTextArea();
+        Imprecion = new javax.swing.JButton();
+        mcarga = new javax.swing.JLabel();
+        mresul = new javax.swing.JLabel();
+        mresul1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Analizador Lexico Grupo 2");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
+        carga.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/vecteezy_upload-icon-sign-symbol-design_9992368_258.png"))); // NOI18N
         carga.setText("cargar ");
+        carga.setBorder(null);
+        carga.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         carga.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cargaActionPerformed(evt);
             }
         });
+        getContentPane().add(carga, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 130, 60));
 
+        clasifica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/transferir.png"))); // NOI18N
         clasifica.setText("clasificar");
+        clasifica.setBorder(null);
+        clasifica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         clasifica.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clasificaActionPerformed(evt);
             }
         });
+        getContentPane().add(clasifica, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 140, 60));
 
+        limpia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/limpiar.png"))); // NOI18N
         limpia.setText("limpiar");
+        limpia.setBorder(null);
+        limpia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         limpia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiaActionPerformed(evt);
             }
         });
+        getContentPane().add(limpia, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, -1, 60));
 
         resultadoc.setColumns(20);
         resultadoc.setRows(5);
         jScrollPane1.setViewportView(resultadoc);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 280, 230));
+
         previo.setColumns(20);
         previo.setRows(5);
         jScrollPane2.setViewportView(previo);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(254, 254, 254)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(carga)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(clasifica)
-                        .addGap(199, 199, 199)
-                        .addComponent(limpia))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(27, 27, 27))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(carga)
-                    .addComponent(clasifica)
-                    .addComponent(limpia))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
-                .addGap(22, 22, 22))
-        );
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 280, 228));
+
+        Imprecion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/imprimir.png"))); // NOI18N
+        Imprecion.setText("Imprimir");
+        Imprecion.setBorder(null);
+        Imprecion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Imprecion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ImprecionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Imprecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 127, 60));
+
+        mcarga.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mcarga.setText("Archivo cargado");
+        getContentPane().add(mcarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+
+        mresul.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mresul.setText("Resultado");
+        getContentPane().add(mresul, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 150, -1, -1));
+
+        mresul1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mresul1.setForeground(new java.awt.Color(255, 255, 255));
+        mresul1.setText(".");
+        getContentPane().add(mresul1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, 30, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -128,6 +137,8 @@ public class Grafica extends javax.swing.JFrame {
        
         
     private void clasificaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clasificaActionPerformed
+    mresul.setVisible(true);
+
         // TODO add your handling code here:
         try{
         
@@ -145,7 +156,8 @@ public class Grafica extends javax.swing.JFrame {
 
     private void cargaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cargaActionPerformed
         // TODO add your handling code here:
-        
+         mcarga.setVisible(true);
+    
         int iResp;
         String strTexto=null;
         ArrayList<String> alLinea=null;
@@ -183,9 +195,15 @@ public class Grafica extends javax.swing.JFrame {
 
     private void limpiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiaActionPerformed
         // TODO add your handling code here:
+            mcarga.setVisible(false);
+            mresul.setVisible(false);
         previo.setText("");
         resultadoc.setText("");
     }//GEN-LAST:event_limpiaActionPerformed
+
+    private void ImprecionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImprecionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ImprecionActionPerformed
 
     
     public void probarLexer() throws IOException{
@@ -277,12 +295,16 @@ public class Grafica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Imprecion;
     private javax.swing.JButton carga;
     private javax.swing.JButton clasifica;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton limpia;
+    private javax.swing.JLabel mcarga;
+    private javax.swing.JLabel mresul;
+    private javax.swing.JLabel mresul1;
     private javax.swing.JTextArea previo;
     private javax.swing.JTextArea resultadoc;
     // End of variables declaration//GEN-END:variables
