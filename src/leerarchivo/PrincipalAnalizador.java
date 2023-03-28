@@ -11,9 +11,9 @@ import java.io.File;
  *
  * @author Charly Ponce
  */
-public class Principal {
+public class PrincipalAnalizador {
     public static void main(String[] args) {
-        String ruta = "C:\\Users\\DELL\\Desktop\\Downloads\\AnalizadorLexico/src/codigo/Lexer.flex";
+        String ruta = "C:/Users/callo/Videos/Proyecto compiladores/Proyecto_Compiladores-main/src/leerarchivo/Lexer.flex";
         generarLexer(ruta);
     }
     public static void generarLexer(String ruta){
