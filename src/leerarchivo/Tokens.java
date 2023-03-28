@@ -7,16 +7,25 @@ package leerarchivo;
 
 /**
  *
- * @author Charly Ponce
  */
 public enum Tokens {
-    Reservadas,
-    Igual,
-    Suma,
-    Resta,
-    Multiplicacion,
-    Division,
-    Identificador,
-    Numero,
-    ERROR
+    MAS,
+    IGUAL,
+    DISTINTO,
+    MENOS, OR,
+    AND,
+    DELIMITADOR,
+    ASIGNACION,
+    ENTRE,
+    MODULO,
+    MENOR,
+    MAYOR,
+    PUNTO_Y_COMA,
+    POR,
+    RESERVADA,
+    IDENTIFICADORES,
+    NUMERO,
+    ID,
+    CADENA,
+    ERROR,
 }

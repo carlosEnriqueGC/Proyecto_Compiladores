@@ -15,8 +15,8 @@ public class Leerarchivo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       leet ven = new leet();
-       ven.setVisible(true);
+       Grafica c = new Grafica();
+       c.setVisible(true);
     }
     
 }
