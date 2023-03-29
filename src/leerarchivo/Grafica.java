@@ -9,12 +9,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.Reader;
-import java.lang.System.Logger;
-import java.lang.System.Logger.Level;
 import java.util.*;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -202,7 +202,26 @@ public class Grafica extends javax.swing.JFrame {
     }//GEN-LAST:event_limpiaActionPerformed
 
     private void ImprecionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImprecionActionPerformed
-        // TODO add your handling code here:
+      try{
+      String nombre="";
+      JFileChooser file=new JFileChooser();
+      file.showSaveDialog(this);
+      File guarda =file.getSelectedFile();
+      
+       if(guarda !=null){
+          
+          FileWriter save=new FileWriter(guarda+".txt");
+          save.append(resultadoc.getText());
+          save.close();//cierre y guardad
+          JOptionPane.showMessageDialog(null,"El archivo se a guardado satisdactoriamente");
+       } 
+      }catch (IOException ex){
+      
+              JOptionPane.showMessageDialog(null,"El archivo nose a guardado");
+      
+      
+      }
+      
     }//GEN-LAST:event_ImprecionActionPerformed
 
     
