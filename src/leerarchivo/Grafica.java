@@ -204,6 +204,9 @@ public class Grafica extends javax.swing.JFrame {
     private void ImprecionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImprecionActionPerformed
       try{
       String nombre="";
+      String grupo="Grupo 3 \n \n";
+      String nombre1="Carlos Enrique Guzman Cabrera 9491-20-13013\n \n";
+      String nombre2="Diego Antonio Marroquin Lopez 9491-20-7815\n \n";
       JFileChooser file=new JFileChooser();
       file.showSaveDialog(this);
       File guarda =file.getSelectedFile();
@@ -211,6 +214,9 @@ public class Grafica extends javax.swing.JFrame {
        if(guarda !=null){
           
           FileWriter save=new FileWriter(guarda+".txt");
+          save.append(grupo);
+          save.append(nombre1);
+          save.append(nombre2);
           save.append(resultadoc.getText());
           save.close();//cierre y guardad
           JOptionPane.showMessageDialog(null,"El archivo se a guardado satisdactoriamente");
