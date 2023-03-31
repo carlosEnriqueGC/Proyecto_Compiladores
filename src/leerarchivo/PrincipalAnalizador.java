@@ -7,13 +7,10 @@ package leerarchivo;
 
 import java.io.File;
 
-/**
- *
- * @author Charly Ponce
- */
+
 public class PrincipalAnalizador {
     public static void main(String[] args) {
-        String ruta = "C:/Users/callo/Videos/Proyecto compiladores/Proyecto_Compiladores-main/src/leerarchivo/Lexer.flex";
+        String ruta = "D:/Proyectos/Proyecto_Compiladores/src/leerarchivo/Lexer.flex";
         generarLexer(ruta);
     }
     public static void generarLexer(String ruta){
